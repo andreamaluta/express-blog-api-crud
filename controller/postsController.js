@@ -17,3 +17,5 @@ function update(req, res){
 function destroy(req, res){
     res.send("eliminazione dell'elemento: " + req.params.id);
 }
+
+module.exports(index, show, store, update, destroy);
