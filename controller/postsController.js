@@ -3,7 +3,7 @@ function index(req, res) {
 }
 
 function show(req, res){
-    res.send('Dettaglio del post: ' +req.params.id);
+    res.send('Dettaglio del post con id: ' +req.params.id);
 }
 
 function store(req, res){
