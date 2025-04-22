@@ -5,7 +5,9 @@ function index(req, res) {
 }
 
 function show(req, res){
-    res.send('Dettaglio del post con id: ' +req.params.id);
+    const id = parseInt(req.params.id);
+    const postFound = post.find(post => post.id === id);
+    res.json(postFound); 
 }
 
 function store(req, res){
