@@ -23,7 +23,13 @@ function modify(req, res){
 }
 
 function destroy(req, res){
-    res.send("eliminazione dell'elemento: " + req.params.id);
+    const id = parseInt(req.params.id);
+    const postFound = post.find(post => post.id === id);
+    post.splice(post.indexOf(postFound), 1);
+    console.log(post);
+
+    res.sendStatus(204);
+
 }
 
 module.exports = {index, show, store, update, modify, destroy}
