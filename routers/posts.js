@@ -3,6 +3,8 @@ const router = express.Router();
 
 const postsController = require('../controller/postsController.js');
 
+
+
 // index
 router.get('/', postsController.index);
 
