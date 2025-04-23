@@ -34,7 +34,17 @@ function store(req, res){
 }
 
 function update(req, res){
-    res.send('Modifica totale del post: ' +req.params.id);
+    const id = parseInt(req.params.id);
+    const findPost = post.find(post=>post.id === id);
+
+    if(!post){
+        res.status(404);
+
+        return res.json({
+            error: 'Not FOund',
+            message: 'Post non trovato'
+        })
+    }
 }
 
 function modify(req, res){
