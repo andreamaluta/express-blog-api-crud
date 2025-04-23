@@ -23,10 +23,13 @@ function store(req, res){
 
     post.push(newPost);
 
-    // console.log(post);
+    
 
     res.status(201);
     res.json(newPost);
+
+    
+
 
 }
 
