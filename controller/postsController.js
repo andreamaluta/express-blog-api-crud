@@ -45,6 +45,14 @@ function update(req, res){
             message: 'Post non trovato'
         })
     }
+
+    findPost.title = req.body.title;
+    findPost.content = req.body.content;
+    findPost.image = req.body.image;
+    findPost.tags = req.body.tags;
+
+    res.json(findPost);
+
 }
 
 function modify(req, res){
