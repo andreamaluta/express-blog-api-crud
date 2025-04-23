@@ -11,7 +11,7 @@ function show(req, res){
 }
 
 function store(req, res){
-    res.send('Inserimento di un post');
+    console.log(req.body);
 }
 
 function update(req, res){
