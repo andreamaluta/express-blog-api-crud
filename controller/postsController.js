@@ -1,6 +1,9 @@
 const post = require('../data/postsList');
 
 function index(req, res) {
+    
+    callmyfunction();
+    
     res.json(post);
 }
 
